@@ -1,5 +1,7 @@
 # hpc_lecture
 
+Student No. 19M30318
+
 |          | Topic                                | Sample code               |
 | -------- | ------------------------------------ | ------------------------- |
 | Class 1  | Introduction to parallel programming |                           |
