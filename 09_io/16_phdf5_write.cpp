@@ -37,10 +37,6 @@ int main (int argc, char** argv) {
     hsize_t stride[2] = {1,1};
     hsize_t count[2]  = {1,1};
 
-    if (mpirank == 1) {
-      printf("base = %d,%d\noffset = %d,%d\n", base[0],base[1],offset[0],offset[1]);
-    }
-
     H5Sselect_hyperslab(globalspace,
         (i == 0) ? H5S_SELECT_SET : H5S_SELECT_OR, offset, stride, count, Nlocal_half);
   }
