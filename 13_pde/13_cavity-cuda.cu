@@ -115,7 +115,7 @@ __global__ void pressure_poisson_finish_device(float *p) {
   for (int x = 0; x < width; x++)
     p[I(0, x)] = p[I(1, x)];
   for (int y = 0; y < height; y++)
-    p[I(0, y)] = p[I(y, 1)];
+    p[I(y, 0)] = p[I(y, 1)];
   for (int x = 0; x < width; x++)
     p[I(height - 1, x)] = 0.0f;
 }
@@ -227,7 +227,7 @@ void cavity_flow(int nt, mat2d& u, mat2d& v, float dt, float dx, float dy, mat2d
 }
 
 int main() {
-  int nt = 2;
+  int nt = 700;
   float dx = 2.0f / (nx - 1.0f);
   float dy = 2.0f / (ny - 1.0f);
 
